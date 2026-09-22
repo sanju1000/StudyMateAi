@@ -1,0 +1,15 @@
+{
+  "name": "studymate-ai",
+  "version": "1.0.0",
+  "description": "StudyMate AI - AI-Powered Study & Document Assistant (MERN + LangChain + Groq RAG)",
+  "scripts": {
+    "server": "npm --prefix server start",
+    "server:dev": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "client:build": "npm --prefix client run build",
+    "dev": "concurrently \"npm run server:dev\" \"npm run client\""
+  },
+  "keywords": ["studymate", "rag", "langchain", "groq", "mern", "react", "ai"],
+  "author": "StudyMate AI Team",
+  "license": "MIT"
+}

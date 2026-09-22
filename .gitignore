@@ -1,0 +1,69 @@
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+**/node_modules/
+/.pnp
+.pnp.js
+
+# ==========================================
+# Environment Variables & Secrets (CRITICAL)
+# ==========================================
+.env
+.env.*
+!.env.example
+*.env
+**/.env
+**/.env.*
+!**/.env.example
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==========================================
+# Production & Build Artifacts
+# ==========================================
+dist/
+dist-ssr/
+build/
+client/dist/
+coverage/
+
+# ==========================================
+# User Uploaded Documents & Vector Data
+# ==========================================
+# Ignore all uploaded files but keep directory structure
+server/uploads/*
+!server/uploads/.gitkeep
+
+# Ignore generated vector stores & local DB but keep directory
+server/data/vectors/*
+!server/data/vectors/.gitkeep
+server/data/*.json
+!server/data/.gitkeep
+
+# ==========================================
+# Logs & Debugging
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# IDE & System Files
+# ==========================================
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db

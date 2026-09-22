@@ -1,0 +1,18 @@
+Operating Systems Course Notes
+Unit 4: Deadlocks and Process Synchronization
+
+1. Definition of Deadlock:
+A deadlock is a situation in concurrent computing where a set of processes are permanently blocked because each process is holding a resource and waiting for another resource acquired by another process in the set. Neither process can proceed, release its resource, or terminate.
+
+2. Four Coffman Conditions:
+For a deadlock to arise, four conditions must hold simultaneously:
+- Mutual Exclusion: At least one resource must be held in a non-shareable mode. Only one process can use the resource at a time.
+- Hold and Wait: A process is currently holding at least one resource and requesting additional resources held by other processes.
+- No Preemption: Resources cannot be forcibly taken away from a process; they can only be released voluntarily by the holding process upon completion.
+- Circular Wait: A closed chain of processes exists such that P0 waits for a resource held by P1, P1 waits for P2, and Pn waits for P0.
+
+3. Deadlock Handling Strategies:
+- Prevention: Designing system protocols to ensure at least one of the four Coffman conditions cannot hold.
+- Avoidance: Dynamically examining resource-allocation state to ensure circular wait never occurs. The Banker's Algorithm (developed by Edsger Dijkstra) is the classic deadlock avoidance algorithm for multiple resource instances.
+- Detection and Recovery: Allowing the system to enter a deadlock state, detecting it via wait-for graphs, and recovering through process termination or resource preemption.
+- Ignorance (Ostrich Algorithm): Assuming deadlocks never occur (used by most general-purpose operating systems like Linux and Windows due to low frequency and high avoidance overhead).
